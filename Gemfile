@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 # Gems added by author
 gem 'pry-rails'
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'faker'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

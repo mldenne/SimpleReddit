@@ -2,6 +2,8 @@
 
 <h1>Listing Links</h1>
 
+<%= paginate @link %>
+
 <table>
   <thead>
     <tr>
@@ -14,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @links.each do |link| %>
+    <% @link.each do |link| %>
       <tr>
         <td><%= link.title %></td>
         <td><%= link.url %></td>

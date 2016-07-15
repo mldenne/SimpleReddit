@@ -1,9 +1,10 @@
 class LinksController < ApplicationController
+  before_action :set_link, only: [:show, :edit, :update, :destroy]
 
   # GET /links
   # GET /links.json
   def index
-    @links = Link.order(created_at: :desc).page(params[:page]).per(10)
+    @link = Link.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   # GET /links/1

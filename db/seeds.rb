@@ -7,8 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 100.times do
-  Links.create!(
+  Link.create!(
     title: Faker::Hipster.sentences(1),
-    url: Faker::Internet.url
+    url: Faker::Internet.url,
+    user_id: Faker::Number.digit,
+    subreddit_id: Faker::Number.digit
   )
 end

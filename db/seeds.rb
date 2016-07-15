@@ -8,7 +8,7 @@
 
 100.times do
   Link.create!(
-    title: Faker::Hipster.sentences(1),
+    title: Faker::Hipster.sentence,
     url: Faker::Internet.url,
     user_id: Faker::Number.digit,
     subreddit_id: Faker::Number.digit

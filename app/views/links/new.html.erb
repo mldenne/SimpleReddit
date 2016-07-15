@@ -1,5 +1,12 @@
-<h1>New Link</h1>
+<h4>submit a link to simplereddit</h4>
+<p>You are summitting a link. The key to a successful submission is interesting content and a descriptive title.</p>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', links_path %>
+<div class="row">
+  <div class="actions form-group">
+    <div class="col-sm-12">
+      <%= link_to 'Go Back to Homepage', links_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>

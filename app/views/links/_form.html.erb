@@ -1,7 +1,37 @@
 <%= simple_form_for @link do |f| %>
-  <%= f.input :title %>
-  <%= f.input :url %>
-  <%= f.input :user_id %>
-  <%= f.input :subreddit_id %>
-  <%= f.button :submit %>
+
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6">
+        <h4><%= f.input :title %></h4>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6">
+        <%= f.input :url %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6">
+        <%= f.input :user_id %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group">
+      <div class="col-sm-6">
+        <%= f.input :subreddit_id %>
+      </div>
+    </div>
+  </div>
+  <div class="actions form-group">
+    <div class="col-sm-6">
+      <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
+  </div>
+
 <% end %>

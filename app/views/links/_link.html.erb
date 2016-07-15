@@ -2,8 +2,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-1">
-        <%= pluralize(link.votes.count, "vote") %>
         <%= button_to '+1', upvote_link_path(link) %>
+        <%= pluralize(link.votes.count, "votes") %>
+        <%= button_to '-1', downvote_link_path(link) %>
     </div>
     <div class="col-md-8">
       <h4><%= link_to link.title, link.url %></h4>

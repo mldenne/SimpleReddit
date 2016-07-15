@@ -1,7 +1,16 @@
 
-
-<h4><%= link_to link.title, link.url %></h4>
-<%= link.user_id %>
-<%= link.subreddit_id %>
-
-</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+        <%= pluralize(link.votes.count, "vote") %>
+        <%= button_to '+1', upvote_link_path(link) %>
+    </div>
+    <div class="col-md-8">
+      <h4><%= link_to link.title, link.url %></h4>
+      <%= link.user_id %>
+      <%= link.subreddit_id %>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>

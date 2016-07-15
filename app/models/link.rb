@@ -1,6 +1,6 @@
 class Link < ActiveRecord::Base
 
-  acts_as_votable
+  has_many :votes, dependent: :destroy
 
   validates_presence_of :title
   validates_presence_of :url

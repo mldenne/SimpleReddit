@@ -7,7 +7,6 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
-gem 'acts_as_votable', '~> 0.10.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

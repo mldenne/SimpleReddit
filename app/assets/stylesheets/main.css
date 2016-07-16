@@ -1,0 +1,19 @@
+/*styling for header*/
+
+header {
+  background-color: #cee3f8;
+}
+
+.navbar {
+  background-color: #f0f0f0;
+  min-height: 20px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin-bottom: 0px;
+}
+
+a:hover {
+  text-decoration: none;
+}

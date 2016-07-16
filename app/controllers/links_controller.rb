@@ -4,12 +4,13 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.order(created_at: :desc).page(params[:page]).per(10)
+    @links = Link.joins(:votes).group("links.id").order("count(votes.*) desc").page(params[:page]).per(10)
   end
 
   # GET /links/1
   # GET /links/1.json
   def show
+    @links = Link.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   # GET /links/new

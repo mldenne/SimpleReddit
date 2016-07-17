@@ -4,7 +4,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.joins(:votes).group("links.id").order("count(votes.*) desc").page(params[:page]).per(10)
+    @links = Link.joins('LEFT OUTER JOIN "votes" ON "votes"."link_id" = "links"."id"').distinct.select('"links".*, COUNT("votes"."id") as votes_count').order('votes_count DESC, "links"."created_at" DESC').group('"links"."id"').page(params[:page]).per(10)
   end
 
   # GET /links/1

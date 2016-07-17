@@ -1,15 +1,14 @@
 
-  <div class="row row-links">
+  <div class="row">
     <div class="col-md-1">
     </div>
-    <div class="col-md-2">
-        <%= button_to '+', upvote_link_path(link) %>
+    <div class="col-md-2 row-votes">
+        <%= link_to image_tag('up-arrow.jpeg'), upvote_link_path(link), :method => :post %>
         <h5><%= link.votes.count %></h5>
-        <%= button_to '-', downvote_link_path(link) %>
+        <%= link_to image_tag('down-arrow.jpeg'), downvote_link_path(link), :method => :post %>
     </div>
     <div class="col-md-9 title-links">
-      <h4><%= link_to link.title, link.url %></h4>
-      <%= link.user_id %>
-      <%= link.subreddit_id %>
+      <h4><%= link_to link.title, upvote_link_path(link), :method => :post %></h4>
+      <h6>submitted at <%= link.created_at %> by user: <%= link.user_id %> to subreddit /r/<%= link.subreddit_id %></h6>  
     </div>
   </div>

@@ -7,6 +7,7 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'haml'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

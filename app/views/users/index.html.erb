@@ -1,0 +1,10 @@
+<% if current_user %>
+  <h4>Welcome, <%= "#{current_user.username}" %>
+  <%= link_to "logout", logout_path, method: :delete %>
+<% else %>
+  <h4><%= link_to "signup", signup_path %>
+<% end %>
+
+<h4>our users</h4>
+
+<%= render 'user' %>

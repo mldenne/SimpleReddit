@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
+
   validates :username, uniqueness: true
-  validates :email, uniqueness: true, format: {:with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
+  validates :email, uniqueness: true
 
   before_save :downcase_username
 

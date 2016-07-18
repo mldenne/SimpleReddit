@@ -1,5 +1,7 @@
 class UserSessionsController < ApplicationController
 
+  before_action :disallow_user, only: [:new, :create]
+
   def new
   end
 
@@ -15,7 +17,17 @@ class UserSessionsController < ApplicationController
     else
       render :new
     end
-
   end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to :root
+  end
+
+private
+
+def disallow_user
+  redirect_to :root if current_user
+end
 
 end

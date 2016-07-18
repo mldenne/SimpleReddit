@@ -68,6 +68,12 @@ class LinksController < ApplicationController
     redirect_to(links_path)
   end
 
+  def visit
+    @link = Link.find(params[:id])
+    @link.votes.create
+    redirect_to(@link.url)
+  end
+
   def downvote
     @link = Link.find(params[:id])
     @link.votes.first.destroy

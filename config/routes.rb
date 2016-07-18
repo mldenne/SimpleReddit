@@ -3,9 +3,6 @@ Rails.application.routes.draw do
     member do
       get 'visit'
       post 'upvote'
-    end
-
-    member do
       post 'downvote'
     end
   end

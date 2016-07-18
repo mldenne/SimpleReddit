@@ -1,8 +1,7 @@
-<p id="notice"><%= notice %></p>
+<div class="alert">
+  <p id="notice"><%= notice %></p>
+</div>
 
 <%= render @links %>
 
 <%= paginate @links %>
-
-<%= link_to 'Edit', edit_link_path(@link) %>
-<%= link_to 'Back', links_path %>

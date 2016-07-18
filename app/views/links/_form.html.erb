@@ -3,13 +3,13 @@
 <div class="row">
   <div class="form-group">
     <div class="col-sm-6">
-      <%= f.input :url, label: 'url', error: 'url is mandatory' %>
+      <%= f.input :url, label: 'url', error: 'a url is mandatory' %>
     </div>
   </div>
 </div><div class="row">
     <div class="form-group">
       <div class="col-sm-6">
-        <%= f.input :title, label: 'title', error: 'title is mandatory, may be same as url' %>
+        <%= f.input :title, label: 'title or summary', error: 'a title or summary is mandatory, may be same as url' %>
       </div>
     </div>
   </div>
@@ -30,6 +30,7 @@
   <div class="actions form-group">
     <div class="col-sm-6">
       <%= f.button :submit, "submit", class: "btn btn-default" %>
+      <%= link_to 'back', links_path, class: "btn btn-default" %>
     </div>
   </div>
 

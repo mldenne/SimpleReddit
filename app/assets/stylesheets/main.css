@@ -24,6 +24,15 @@ a:hover {
   margin-top: 10px;
 }
 
+.alert {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 /*styling for links and counters*/
 
 .row {

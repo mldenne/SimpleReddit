@@ -1,0 +1,16 @@
+%div.alert#notice
+  = notice
+
+- if current_user
+  %h4
+    Welcome, #{current_user.username}
+  = link_to "logout", logout_path, method: :delete
+- else
+  %h4
+    = link_to "login", login_path
+
+
+%h4
+  our users
+
+= render @users

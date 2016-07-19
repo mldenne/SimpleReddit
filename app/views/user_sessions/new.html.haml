@@ -1,0 +1,10 @@
+%div.alert#notice
+  = notice
+
+%h4
+  login
+
+= simple_form_for :session do |f|
+  = f.input :email
+  = f.input :password
+  = f.button :submit

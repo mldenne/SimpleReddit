@@ -1,11 +1,11 @@
 class User < ActiveRecord::Base
 
+  has_secure_password
+
   validates :username, uniqueness: true
   validates :email, uniqueness: true
 
   before_save :downcase_username
-
-  has_secure_password
 
   def to_params
     username

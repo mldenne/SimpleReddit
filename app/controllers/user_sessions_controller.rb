@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     if @user
       if @user.authenticate(params[:session][:password])
         session[:user_id] = @user.id
-        redirect_to :root
+        redirect_to root_path
       else
         render :new
       end
@@ -21,13 +21,13 @@ class UserSessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to :root
+    redirect_to root_path
   end
 
-private
+  private
 
-def disallow_user
-  redirect_to :root if current_user
-end
+  def disallow_user
+    redirect_to :root if current_user
+  end
 
 end

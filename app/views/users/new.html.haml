@@ -1,0 +1,13 @@
+%div.alert#notice
+  = notice
+
+%h4
+  signup
+
+= simple_form_for @user do |f|
+  = f.input :username
+  = f.input :email
+  = f.input :bio
+  = f.input :password
+  = f.input :password_confirmation
+  = f.button :submit

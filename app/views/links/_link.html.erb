@@ -10,7 +10,7 @@
   </div>
   <div class="col-md-9 title-links">
     <h4><%= link_to link.title, visit_link_path(link) %></h4>
-    <h6>submitted at <%= link.created_at %> by <%= link.user_id %> to subreddit /r/<%= link.subreddit_id %></h6>
+    <h6>submitted at <%= link_to link.created_at, link_path(id: link.id) %> by <%= link.user_id %> to subreddit /r/<%= link.subreddit_id %></h6>
     <%= link_to 'edit this link', edit_link_path(link), class: "btn btn-default btn-xs" %>
     <%= link_to 'destroy this link', link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-xs" %>
     <%= link_to 'show newest links', link, class: "btn btn-default btn-xs" %>

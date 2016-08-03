@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
-  get 'comments/body:text'
-
-  get 'comments/user_id:integer'
-
-  get 'comments/link_id:integer'
+  # get 'comments/body:text'
+  #
+  # get 'comments/user_id:integer'
+  #
+  # get 'comments/link_id:integer'
 
   resources :subreddits
   resources :users
   resources :links do
+    resources :comments
     member do
       get 'visit'
       post 'upvote'

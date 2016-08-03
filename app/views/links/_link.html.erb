@@ -3,7 +3,7 @@
   </div>
   <div class="col-md-2 row-votes">
       <%= link_to image_tag('up-arrow.jpg'), upvote_link_path(link), method: :post, remote: true %>
-      <h5><%= link.votes.count %></h5>
+      <h5 id="vote-count_<%= link.id %>"><%= link.votes.count %></h5>
       <% unless link.votes.count == 0 %>
         <%= link_to image_tag('down-arrow.jpg'), downvote_link_path(link), method: :post, remote: true %>
       <% end %>

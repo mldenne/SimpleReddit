@@ -66,7 +66,10 @@ class LinksController < ApplicationController
   def upvote
     @link = Link.find(params[:id])
     @link.votes.create
-    redirect_to(links_path)
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   def visit
@@ -78,7 +81,10 @@ class LinksController < ApplicationController
   def downvote
     @link = Link.find(params[:id])
     @link.votes.first.destroy
-    redirect_to(links_path)
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
   end
 
   private

@@ -1,5 +1,5 @@
 <div class="row">
-  <%= simple_form_for @comment do |f| %>
+  <%= simple_form_for [@link, @comment] do |f| %>
     <%= f.input :body %>
     <%= f.button :submit %>
   <% end %>

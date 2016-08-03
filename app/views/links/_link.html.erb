@@ -1,13 +1,7 @@
-<div class="row">
+<div class="row" id="link_<%= link.id %>">
   <div class="col-md-1">
   </div>
-  <div class="col-md-2 row-votes">
-      <%= link_to image_tag('up-arrow.jpg'), upvote_link_path(link), method: :post, remote: true %>
-      <h5 id="vote-count_<%= link.id %>"><%= link.votes.count %></h5>
-      <% unless link.votes.count == 0 %>
-        <%= link_to image_tag('down-arrow.jpg'), downvote_link_path(link), method: :post, remote: true %>
-      <% end %>
-  </div>
+  <%= render partial: "vote", locals: {link: link} %>
   <div class="col-md-9 title-links">
     <h4><%= link_to link.title, visit_link_path(link) %></h4>
     <h6>submitted at <%= link_to link.created_at, link_path(id: link.id) %> by <%= link.user_id %> to subreddit /r/<%= link.subreddit_id %></h6>

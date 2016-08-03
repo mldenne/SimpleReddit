@@ -11,6 +11,7 @@ class LinksController < ApplicationController
   # GET /links/1.json
   def show
     @link = Link.find(params[:id])
+    @comment = Comment.new
   end
 
   # Rather than using show for this, maybe add a recent=true param to index? links?recent = true / if params[:recent]

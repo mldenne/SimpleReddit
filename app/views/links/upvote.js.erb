@@ -1,1 +1,1 @@
-$('<%="#vote-count_#{@link.id}"%>').html('<%= @link.votes.count %>')
+$('<%="#link_#{@link.id} .row-votes"%>').replaceWith('<%= j render partial: "vote", locals: {link: @link} %>')

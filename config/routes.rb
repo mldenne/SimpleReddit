@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
+  resources :comments
   # get 'comments/body:text'
   #
-  # get 'comments/user_id:integer'
+  # get 'comments/user:references'
   #
-  # get 'comments/link_id:integer'
+  # get 'comments/link:references'
 
   resources :subreddits
   resources :users
   resources :links do
-    resources :comments
-    member do
+      member do
       get 'visit'
       post 'upvote'
       post 'downvote'
@@ -56,8 +56,7 @@ Rails.application.routes.draw do
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
-  #     resources :comments
-  #     resources :sales do
+  #     #     resources :sales do
   #       get 'recent', on: :collection
   #     end
   #   end

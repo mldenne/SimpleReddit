@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = current_user.addendums.create!(
+    @comment = comments.create!(
       link_id: params[:link_id],
       body: params[:comment][:body]
     )

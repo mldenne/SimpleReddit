@@ -10,7 +10,6 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    @links = Link.order(created_at: :desc).page(params[:page]).per(10)
   end
 
   # Rather than using show for this, maybe add a recent=true param to index? links?recent = true / if params[:recent]

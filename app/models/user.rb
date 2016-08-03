@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   before_save :downcase_username
 
+  has_many :links
+  has_many :votes
+  has_many :comments
+
   def to_params
     username
   end

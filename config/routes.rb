@@ -1,14 +1,9 @@
 Rails.application.routes.draw do
-  resources :comments
-  # get 'comments/body:text'
-  #
-  # get 'comments/user:references'
-  #
-  # get 'comments/link:references'
-
+  
   resources :subreddits
   resources :users
   resources :links do
+    resources :comments
       member do
       get 'visit'
       post 'upvote'

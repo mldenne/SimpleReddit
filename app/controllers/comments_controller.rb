@@ -1,5 +1,8 @@
 class CommentsController < ApplicationController
 
+  def index
+  end
+
   def create
     @comment = Comment.create(
       link_id: params[:link_id],

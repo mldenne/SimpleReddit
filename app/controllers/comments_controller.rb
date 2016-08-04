@@ -1,14 +1,16 @@
 class CommentsController < ApplicationController
 
   def create
-    @comment = comments.create!(
+    @comment = Comment.create(
       link_id: params[:link_id],
       body: params[:comment][:body]
     )
     respond_to do |format|
-      format.json {
-        render :show, status: :created, location: [@comment.post, @comment]
-      }
+      if @comment.save
+        format.html { redirect_to link_path(id: params[:link_id]) }
+      else
+        format.html { render :new }
+      end
     end
   end
 
